@@ -1,0 +1,331 @@
+.lanyard-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 620px;
+  overflow: hidden;
+  background: #030403;
+  perspective: 1600px;
+}
+
+.retro-computer {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.retro-computer__frame {
+  position: relative;
+  width: min(100vw, 149.9dvh);
+  max-width: 100%;
+  aspect-ratio: 1535 / 1024;
+  container-type: inline-size;
+}
+
+.retro-computer__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.retro-screen-contact {
+  position: absolute;
+  z-index: 1;
+  top: 32.5%;
+  left: 41.4%;
+  display: flex;
+  width: 24.3%;
+  height: 19.8%;
+  flex-direction: column;
+  justify-content: space-around;
+  container-type: inline-size;
+  color: #d8ddb0;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  opacity: 0;
+  transform: translateY(1.2cqw);
+  transition:
+    opacity 500ms ease 180ms,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1) 180ms;
+}
+
+.lanyard-page.is-contact-active .retro-screen-contact {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.retro-contact-row {
+  display: grid;
+  grid-template-columns: 9cqw minmax(0, 1fr);
+  gap: 3cqw;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-1.5cqw);
+  transition:
+    opacity 420ms ease var(--contact-delay),
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--contact-delay),
+    color 180ms ease;
+}
+
+.lanyard-page.is-contact-active .retro-contact-row {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+a.retro-contact-row {
+  pointer-events: auto;
+}
+
+a.retro-contact-row:hover {
+  color: #f6f8cf;
+}
+
+.retro-contact-icon {
+  display: grid;
+  width: 8cqw;
+  height: 8cqw;
+  place-items: center;
+}
+
+.retro-contact-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.retro-contact-copy {
+  display: grid;
+  gap: 1cqw;
+  min-width: 0;
+}
+
+.retro-contact-label {
+  font-size: 4.1cqw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.retro-contact-value {
+  overflow: hidden;
+  font-size: 3.45cqw;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lanyard-unit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lanyard-unit--portrait {
+  z-index: 3;
+}
+
+.lanyard-rope {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.lanyard-unit--portrait .lanyard-rope__body {
+  fill: none;
+  stroke: #171916;
+  stroke-linecap: round;
+  stroke-width: 15;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.55));
+}
+
+.lanyard-unit--portrait .lanyard-rope__detail {
+  fill: none;
+  stroke: rgba(232, 112, 42, 0.46);
+  stroke-dasharray: 4 19;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.lanyard-card {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: clamp(146px, min(13.55vw, 20.32dvh), 220px);
+  height: auto;
+  aspect-ratio: 0.73;
+  container-type: inline-size;
+  cursor: grab;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  transform-origin: 50% 0;
+  touch-action: none;
+  user-select: none;
+  visibility: hidden;
+  will-change: transform;
+}
+
+.lanyard-unit.is-revealed .lanyard-rope {
+  opacity: 1;
+}
+
+.lanyard-unit.is-revealed .lanyard-card {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.lanyard-card.is-dragging {
+  cursor: grabbing;
+}
+
+.lanyard-card__clip {
+  position: absolute;
+  z-index: 3;
+  top: -25px;
+  left: 50%;
+  width: 18px;
+  height: 31px;
+  border: 3px solid #8b897f;
+  border-radius: 6px 6px 3px 3px;
+  background: linear-gradient(90deg, #343530, #b6b3a8 45%, #555650);
+  transform: translateX(-50%);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.55);
+}
+
+.lanyard-card__clip::after {
+  position: absolute;
+  right: 2px;
+  bottom: -7px;
+  left: 2px;
+  height: 8px;
+  border-radius: 2px;
+  content: "";
+  background: #242520;
+}
+
+.lanyard-card__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(70, 67, 59, 0.16);
+  border-radius: 11cqw;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow:
+    0 22px 46px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 24px rgba(116, 102, 75, 0.05);
+}
+
+.lanyard-card__face--front {
+  align-items: center;
+  padding: 22cqw 8cqw 7cqw;
+  color: #101933;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), transparent 38%),
+    #f1eee6;
+  transform: translateZ(1px);
+}
+
+.lanyard-card__face--back {
+  align-items: center;
+  justify-content: center;
+  color: #10255d;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255, 255, 255, 0.9), transparent 34%),
+    #eeeae0;
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+.lanyard-card__photo-frame {
+  width: 100%;
+  height: 70cqw;
+  overflow: hidden;
+  flex: none;
+  border: 1px solid rgba(44, 43, 39, 0.13);
+  border-radius: 7cqw;
+  background: #f7f7f5;
+  box-shadow: inset 0 2px 8px rgba(25, 25, 23, 0.08);
+}
+
+.lanyard-card__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  user-select: none;
+}
+
+.lanyard-card__identity {
+  display: grid;
+  gap: 2cqw;
+  justify-items: center;
+  margin-top: 7cqw;
+  text-align: center;
+}
+
+.lanyard-card__name {
+  color: #10255d;
+  font-size: clamp(20px, 13.2cqw, 29px);
+  font-weight: 750;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.lanyard-card__role {
+  color: #161616;
+  font-size: clamp(8px, 5cqw, 11px);
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.lanyard-card__hole {
+  position: absolute;
+  top: 7cqw;
+  left: 50%;
+  width: 26cqw;
+  height: 7cqw;
+  border: 1px solid rgba(43, 42, 38, 0.16);
+  border-radius: 999px;
+  background: #d9d7d0;
+  transform: translateX(-50%);
+  box-shadow:
+    inset 0 2px 5px rgba(25, 25, 23, 0.25),
+    0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.lanyard-card__monogram {
+  font-size: 38cqw;
+  font-weight: 900;
+  letter-spacing: -0.1em;
+  transform: translateX(-0.05em);
+}
+
+.lanyard-card__back-label {
+  margin-top: 4cqw;
+  font-size: 5.5cqw;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}

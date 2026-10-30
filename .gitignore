@@ -1,0 +1,18 @@
+.DS_Store
+/VIDEO_PROMPT.md
+
+# Publish only assets used by the website. Keep original photos and references local.
+/assets/*
+!/assets/person-desktop.png
+!/assets/cowboy-desktop.png
+!/assets/火光牛仔猴环绕推进-web.mp4
+!/assets/火光牛仔猴环绕推进-reverse-web.mp4
+!/assets/retro-computer-contact.jpg
+!/assets/profile-photo-crop.jpg
+!/assets/marquee/
+!/assets/mood/
+!/assets/what-if/
+!/assets/taste/
+/assets/taste/*
+!/assets/taste/fonts/
+!/assets/taste/personal/

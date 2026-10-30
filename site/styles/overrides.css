@@ -1,0 +1,115 @@
+.cursor {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(calc(var(--x) - 17px), calc(var(--y) - 17px), 0);
+  will-change: opacity, transform;
+}
+
+.cursor::after {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  content: "";
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+.stage.is-pointer-active.is-at-top .cursor {
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stage.is-at-top {
+    cursor: none;
+  }
+
+  .stage.is-at-top button,
+  .stage.is-at-top a {
+    cursor: pointer;
+  }
+}
+
+@media (max-height: 740px) {
+  .profile-block--tl,
+  .profile-block--tr {
+    top: 27vh;
+  }
+
+  .profile-block--bl,
+  .profile-block--br {
+    bottom: 19vh;
+  }
+
+  .profile-list {
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-track {
+    height: 100vh;
+  }
+
+  .stage {
+    position: relative;
+  }
+
+  .portrait--person,
+  .intro-ui,
+  .cursor,
+  .video-layer,
+  .taste-page,
+  .marquee-page {
+    display: none;
+  }
+
+  .portrait--cowboy {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .profile-title,
+  .profile-block,
+  .download-cv {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .download-cv {
+    pointer-events: auto;
+  }
+
+  .round-carousel-page {
+    cursor: default;
+  }
+
+  [data-service-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .carousel-detail__backdrop,
+  .carousel-detail__media,
+  .carousel-detail__back,
+  .mood-arc-card,
+  .mood-image-viewer,
+  .mood-image-viewer__image {
+    transition: none;
+  }
+
+  .lanyard-card {
+    cursor: default;
+  }
+}

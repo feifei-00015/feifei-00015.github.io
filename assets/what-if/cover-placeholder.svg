@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow"><stop stop-color="#527362"/><stop offset="1" stop-color="#172621"/></radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M 80 0 H 0 V 80" fill="none" stroke="#deeadc" stroke-opacity=".06"/></pattern>
+  </defs>
+  <path fill="url(#glow)" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#grid)" d="M0 0h1600v1000H0z"/>
+  <circle cx="800" cy="500" r="330" fill="none" stroke="#e4eadb" stroke-opacity=".16"/>
+  <circle cx="800" cy="500" r="270" fill="none" stroke="#e4eadb" stroke-opacity=".08"/>
+  <g fill="#f4eadb" text-anchor="middle" font-family="Arial, sans-serif">
+    <text x="800" y="400" font-size="18" letter-spacing="8" opacity=".6">PROJECT PREVIEW</text>
+    <text x="800" y="545" font-size="136" font-weight="700" letter-spacing="-6">WHAT_IF</text>
+    <text x="800" y="620" font-size="16" letter-spacing="5" opacity=".5">VISUALS COMING SOON</text>
+  </g>
+</svg>

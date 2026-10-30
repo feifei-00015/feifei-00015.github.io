@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="刘昕禹的个人作品集。在光影之间，揭开人物内心的牛仔灵魂。"
+    />
+    <title>刘昕禹 · Jacky Liu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kanit:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/taste.css" />
+    <link rel="stylesheet" href="./styles/project-details.css" />
+    <link rel="stylesheet" href="./styles/carousel.css" />
+    <link rel="stylesheet" href="./styles/skills.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/overrides.css" />
+
+  </head>
+
+  <body>
+    <main>
+      <section class="scroll-track" id="story" aria-label="人物身份与个人资料">
+        <div class="stage is-at-top" id="stage">
+          <div class="portrait portrait--person" aria-hidden="true"></div>
+          <div class="portrait portrait--cowboy" aria-hidden="true"></div>
+          <div class="video-layer" id="videoLayer" aria-hidden="true">
+            <video
+              class="motion-video is-active"
+              id="motionVideo"
+              muted
+              playsinline
+              preload="auto"
+            >
+              <source src="../assets/火光牛仔猴环绕推进-web.mp4" type="video/mp4" />
+            </video>
+            <video
+              class="motion-video"
+              id="reverseVideo"
+              muted
+              playsinline
+              preload="auto"
+            >
+              <source
+                src="../assets/火光牛仔猴环绕推进-reverse-web.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          <div class="vignette" aria-hidden="true"></div>
+          <div class="grain" aria-hidden="true"></div>
+
+          <div class="intro-ui" id="introUi">
+            <div class="hero-copy">
+              <h1>HI,I'M JACKY</h1>
+            </div>
+          </div>
+
+          <div class="profile-ui" id="profileUi" aria-label="About me">
+            <h2 class="profile-title">ABOUT ME</h2>
+
+            <svg
+              class="profile-connectors"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <g class="profile-connector" data-order="0">
+                <path d="M 39 53 L 34 46 H 5" />
+                <ellipse cx="39" cy="53" rx="0.23" ry="0.4" />
+                <ellipse cx="5" cy="46" rx="0.23" ry="0.4" />
+              </g>
+              <g class="profile-connector" data-order="1">
+                <path d="M 61 53 L 66 46 H 95" />
+                <ellipse cx="61" cy="53" rx="0.23" ry="0.4" />
+                <ellipse cx="95" cy="46" rx="0.23" ry="0.4" />
+              </g>
+              <g class="profile-connector" data-order="2">
+                <path d="M 40 70 L 34 84 H 5" />
+                <ellipse cx="40" cy="70" rx="0.23" ry="0.4" />
+                <ellipse cx="5" cy="84" rx="0.23" ry="0.4" />
+              </g>
+              <g class="profile-connector" data-order="3">
+                <path d="M 60 70 L 66 84 H 95" />
+                <ellipse cx="60" cy="70" rx="0.23" ry="0.4" />
+                <ellipse cx="95" cy="84" rx="0.23" ry="0.4" />
+              </g>
+            </svg>
+
+            <section class="profile-block profile-block--tl" data-order="0">
+              <dl class="profile-list">
+                <div class="profile-row profile-row--name">
+                  <dt>NAME</dt>
+                  <dd>XinYu Liu</dd>
+                </div>
+                <div class="profile-row">
+                  <dt>AGE</dt>
+                  <dd>23</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="profile-block profile-block--tr" data-order="1">
+              <dl class="profile-list">
+                <div class="profile-row">
+                  <dt>SCHOOL</dt>
+                  <dd>HuaZhong Agriculture<br />University</dd>
+                </div>
+                <div class="profile-row">
+                  <dt>DEGREE</dt>
+                  <dd>Science</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="profile-block profile-block--bl" data-order="2">
+              <dl class="profile-list">
+                <div class="profile-row">
+                  <dt>MBTI</dt>
+                  <dd>ENTJ</dd>
+                </div>
+                <div class="profile-row">
+                  <dt>HOBBIES</dt>
+                  <dd>Reading / Films / Fitness / Photography</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="profile-block profile-block--br" data-order="3">
+              <dl class="profile-list">
+                <div class="profile-row">
+                  <dt>MAJOR</dt>
+                  <dd>Bioinformatics</dd>
+                </div>
+                <div class="profile-row profile-row--research">
+                  <dt>RESEARCH</dt>
+                  <dd>Cancer Early Detection</dd>
+                </div>
+              </dl>
+            </section>
+
+            <a
+              class="download-cv"
+              href="../assets/Liu-Xinyu-Resume.pdf"
+              download="刘昕禹-简历.pdf"
+              aria-label="Download Xinyu Liu's résumé"
+            >
+              DOWNLOAD CV
+            </a>
+          </div>
+
+          <section
+            class="marquee-page"
+            id="marqueePage"
+            aria-label="滚动作品预览"
+          >
+            <div class="marquee-rows">
+              <div class="marquee-row">
+                <div class="marquee-track" data-direction="right"></div>
+              </div>
+              <div class="marquee-row">
+                <div class="marquee-track" data-direction="left"></div>
+              </div>
+            </div>
+          </section>
+          <div class="cursor" aria-hidden="true"></div>
+        </div>
+        <section
+          class="taste-page"
+          id="tastePage"
+          aria-label="My Taste 动态素材展示"
+        >
+          <div class="taste-canvas" id="tasteCanvas" aria-hidden="true"></div>
+          <div class="taste-heading">
+            <button class="taste-arrow" id="tastePrevious" type="button" aria-label="Previous Taste category">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m10 3-5 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+            <h2 class="taste-title">My <span class="taste-word" id="tasteWord">Movie</span> Taste</h2>
+            <button class="taste-arrow" id="tasteNext" type="button" aria-label="Next Taste category">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+          </div>
+          <div class="taste-keywords" id="tasteKeywords">
+            <p class="taste-keywords__title">Keywords</p>
+            <div class="taste-keywords__groups" id="tasteKeywordGroups"></div>
+          </div>
+        </section>
+      </section>
+
+      <section
+        class="round-carousel-page"
+        id="roundCarouselPage"
+        aria-label="3D 环形作品轮播"
+      >
+        <div class="round-carousel-scene">
+          <div class="round-carousel-ring" id="roundCarouselRing"></div>
+        </div>
+
+        <div
+          class="carousel-detail"
+          id="carouselDetail"
+          role="dialog"
+          aria-modal="true"
+          aria-label="作品图片预览"
+          aria-hidden="true"
+        >
+          <div class="carousel-detail__backdrop"></div>
+          <div class="carousel-detail__hero">
+            <div class="carousel-detail__media" id="carouselDetailMedia">
+              <img
+                id="carouselDetailImage"
+                alt=""
+                draggable="false"
+              />
+            </div>
+
+            <div class="carousel-detail__intro">
+              <div>
+                <span class="carousel-detail__index" id="carouselDetailIndex">
+                  PROJECT 01
+                </span>
+                <h2 class="carousel-detail__title" id="carouselDetailTitle">
+                  AETHER VOYAGE
+                </h2>
+              </div>
+              <p class="carousel-detail__hero-meta" id="carouselDetailHeroMeta">
+                WEB EXPERIENCE<br />2026
+              </p>
+            </div>
+
+            <span class="carousel-detail__scroll-cue" aria-hidden="true">
+              SCROLL TO EXPLORE ↓
+            </span>
+          </div>
+
+          <div class="carousel-detail__body">
+            <div class="carousel-detail__body-inner">
+              <div class="carousel-detail__overview">
+                <p class="carousel-detail__section-label">PROJECT OVERVIEW</p>
+                <p class="carousel-detail__summary" id="carouselDetailSummary">
+                  用沉浸式视觉与清晰的信息层级，构建兼具叙事感和可用性的数字体验。
+                </p>
+              </div>
+
+              <div class="carousel-detail__facts">
+                <div class="carousel-detail__fact">
+                  <span>ROLE</span>
+                  <strong id="carouselDetailRole">UI / UX Design</strong>
+                </div>
+                <div class="carousel-detail__fact">
+                  <span>TYPE</span>
+                  <strong id="carouselDetailType">Website</strong>
+                </div>
+                <div class="carousel-detail__fact">
+                  <span>YEAR</span>
+                  <strong id="carouselDetailYear">2026</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-detail__back"
+            id="carouselDetailBack"
+            type="button"
+          >
+            <span class="carousel-detail__back-arrow" aria-hidden="true">←</span>
+            BACK
+          </button>
+        </div>
+
+        <div class="carousel-transition-card" id="carouselTransitionCard" hidden>
+          <img
+            id="carouselTransitionImage"
+            alt=""
+            draggable="false"
+          />
+        </div>
+      </section>
+
+      <section class="services-page" id="servicesPage" aria-labelledby="servicesTitle" aria-label="个人技能">
+        <h2
+          class="services-heading"
+          id="servicesTitle"
+          data-service-reveal
+        >
+          Skills
+        </h2>
+
+        <div class="services-list">
+          <article
+            class="service-item"
+            data-service-reveal
+            style="--service-delay: 0ms"
+          >
+            <span class="service-number">01</span>
+            <div class="service-copy">
+              <h3 class="service-name">AI-Assisted Development</h3>
+              <p class="service-description">
+                Building and debugging software with <strong>Codex</strong>,
+                <strong>Claude Code</strong>, and <strong>DeepSeek Harness</strong>,
+                using AI throughout the development workflow.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="service-item"
+            data-service-reveal
+            style="--service-delay: 80ms"
+          >
+            <span class="service-number">02</span>
+            <div class="service-copy">
+              <h3 class="service-name">Programming</h3>
+              <p class="service-description">
+                Developing in <strong>Python</strong> and <strong>C++</strong>,
+                from data processing and model implementation to practical
+                software tools.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="service-item"
+            data-service-reveal
+            style="--service-delay: 160ms"
+          >
+            <span class="service-number">03</span>
+            <div class="service-copy">
+              <h3 class="service-name">Deep Learning</h3>
+              <p class="service-description">
+                Working across dataset sourcing, cleaning, model building,
+                training, and tuning, with a strong understanding of
+                <strong>CNNs</strong>, <strong>RNNs</strong>, <strong>GNNs</strong>,
+                <strong>Transformers</strong>, and <strong>ResNet</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="service-item"
+            data-service-reveal
+            style="--service-delay: 240ms"
+          >
+            <span class="service-number">04</span>
+            <div class="service-copy">
+              <h3 class="service-name">Agent Systems</h3>
+              <p class="service-description">
+                Designing agent workflows with <strong>prompt engineering</strong>,
+                <strong>Skills</strong>, <strong>MCP</strong>, end-to-end
+                <strong>RAG</strong> pipelines, and <strong>subagents</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="service-item"
+            data-service-reveal
+            style="--service-delay: 320ms"
+          >
+            <span class="service-number">05</span>
+            <div class="service-copy">
+              <h3 class="service-name">Visual &amp; AI Media</h3>
+              <p class="service-description">
+                Creating graphics in <strong>Adobe Illustrator</strong> and
+                producing AI video with <strong>Seedance</strong>.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lanyard-page" id="lanyardPage" aria-label="联系方式">
+        <div class="retro-computer">
+          <div class="retro-computer__frame">
+            <img
+              class="retro-computer__image"
+              src="../assets/retro-computer-contact.jpg"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />
+
+            <div class="retro-screen-contact" aria-label="联系刘昕禹">
+              <a
+                class="retro-contact-row"
+                href="mailto:lxy20030628@sina.com"
+                style="--contact-delay: 300ms"
+              >
+                <span class="retro-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect>
+                    <path d="m4 7 8 6 8-6"></path>
+                  </svg>
+                </span>
+                <span class="retro-contact-copy">
+                  <strong class="retro-contact-label">Email</strong>
+                  <span class="retro-contact-value">lxy20030628@sina.com</span>
+                </span>
+              </a>
+
+              <div
+                class="retro-contact-row"
+                style="--contact-delay: 420ms"
+              >
+                <span class="retro-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M14.5 4.2c4 0 7.2 2.5 7.2 5.7 0 1.8-1 3.4-2.6 4.4l.7 2.4-2.7-1.2c-.8.2-1.7.4-2.6.4-4 0-7.2-2.6-7.2-6s3.2-5.7 7.2-5.7Z"></path>
+                    <path d="M8.8 8.2c-3.6 0-6.5 2.3-6.5 5.2 0 1.6.9 3 2.3 4l-.6 2.2 2.5-1.1c.7.2 1.5.3 2.3.3 3.6 0 6.5-2.3 6.5-5.2S12.4 8.2 8.8 8.2Z"></path>
+                    <path d="M6.6 12.5h.1M10.7 12.5h.1M12.3 8.7h.1M16.7 8.7h.1"></path>
+                  </svg>
+                </span>
+                <span class="retro-contact-copy">
+                  <strong class="retro-contact-label">WeChat</strong>
+                  <span class="retro-contact-value">Feifei__0628__</span>
+                </span>
+              </div>
+
+              <a
+                class="retro-contact-row"
+                href="https://github.com/feifei-00015"
+                target="_blank"
+                rel="noreferrer"
+                style="--contact-delay: 540ms"
+              >
+                <span class="retro-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1-.4-2-1-2.6 3.3-.4 6.8-1.6 6.8-7.4 0-1.6-.6-3-1.5-4.1.1-.4.6-2-.2-4 0 0-1.2-.4-4.1 1.6a14.3 14.3 0 0 0-7.5 0C5.6-1.4 4.4-1 4.4-1c-.8 2-.3 3.6-.2 4C3.3 4.1 2.7 5.5 2.7 7.1c0 5.8 3.5 7 6.8 7.4-.5.5-.8 1.1-1 1.8V22"></path>
+                  </svg>
+                </span>
+                <span class="retro-contact-copy">
+                  <strong class="retro-contact-label">GitHub</strong>
+                  <span class="retro-contact-value">@feifei-00015</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="lanyard-unit lanyard-unit--portrait"
+          data-lanyard
+          data-anchor="0.218"
+          data-delay="320"
+          data-drift="1"
+        >
+          <svg class="lanyard-rope" aria-hidden="true">
+            <path class="lanyard-rope__body"></path>
+            <path class="lanyard-rope__detail"></path>
+          </svg>
+
+          <div class="lanyard-card lanyard-card--portrait">
+            <div class="lanyard-card__clip" aria-hidden="true"></div>
+            <article
+              class="lanyard-card__face lanyard-card__face--front"
+            >
+              <div class="lanyard-card__hole" aria-hidden="true"></div>
+              <div class="lanyard-card__photo-frame">
+                <img
+                  class="lanyard-card__photo"
+                  src="../assets/profile-photo-crop.jpg"
+                  alt="刘昕禹证件照"
+                  draggable="false"
+                />
+              </div>
+              <div class="lanyard-card__identity">
+                <strong class="lanyard-card__name">Xinyu Liu</strong>
+                <span class="lanyard-card__role">
+                  Postgraduate Student of Science<br />
+                  Bioinformatics
+                </span>
+              </div>
+            </article>
+
+            <article class="lanyard-card__face lanyard-card__face--back">
+              <div class="lanyard-card__hole" aria-hidden="true"></div>
+              <strong class="lanyard-card__monogram">JL</strong>
+              <span class="lanyard-card__back-label">JACKY LIU · HZAU</span>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <article
+      class="mood-detail"
+      id="moodDetail"
+      role="dialog"
+      aria-modal="true"
+      aria-label="MOOD 项目详情"
+      aria-hidden="true"
+    >
+      <header class="mood-detail__hero">
+        <video
+          class="mood-detail__video"
+          id="moodDetailVideo"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="../assets/mood/mood-cover.png"
+        >
+          <source src="../assets/mood/mood-train-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="mood-detail__hero-shade" aria-hidden="true"></div>
+        <div class="mood-detail__hero-copy">
+          <div>
+            <span class="mood-detail__eyebrow">DESKTOP APPLICATION · 2026</span>
+            <h2 class="mood-detail__title">MOOD</h2>
+          </div>
+          <p class="mood-detail__lead">
+            MOOD 是一款把 AI 对话、情绪、事件、计划与行动反馈连接起来的桌面应用。它用 RAG 与用户确认机制构建可控的长期记忆，让每一次陪伴都不必从零开始。
+          </p>
+        </div>
+      </header>
+
+      <div class="mood-detail__body">
+        <section class="mood-detail__intro-grid" aria-labelledby="moodOverviewTitle">
+          <p class="mood-detail__section-label" id="moodOverviewTitle">PROJECT OVERVIEW</p>
+          <p class="mood-detail__statement">
+            把散落在聊天、日历和待办里的生活片段，整理成一份由用户掌握的长期个人上下文。
+          </p>
+        </section>
+
+        <div class="mood-detail__facts" aria-label="项目基本信息">
+          <div class="mood-detail__fact">
+            <span>ROLE</span>
+            <strong>Product / Full-stack</strong>
+          </div>
+          <div class="mood-detail__fact">
+            <span>TYPE</span>
+            <strong>AI Desktop App</strong>
+          </div>
+          <div class="mood-detail__fact">
+            <span>STATUS</span>
+            <strong>v1.0.0 Beta</strong>
+          </div>
+        </div>
+
+        <section class="mood-arc-gallery" id="moodArcGallery" aria-label="MOOD 产品界面横向循环展示">
+          <div class="mood-arc-gallery__meta" aria-hidden="true">
+            <span>PRODUCT GALLERY</span>
+            <span>DRAG TO EXPLORE · CLICK TO EXPAND</span>
+          </div>
+          <div class="mood-arc-gallery__viewport" id="moodArcViewport">
+            <div class="mood-arc-track" id="moodArcTrack"></div>
+          </div>
+        </section>
+
+        <section class="mood-detail__features" aria-label="MOOD 核心能力">
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">01</span>
+            <h3>有依据的情绪支持</h3>
+            <p>先检查安全风险，再结合用户允许的上下文与心理支持案例组织回答，减少空泛、模板化的安慰。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">02</span>
+            <h3>由用户确认的记忆</h3>
+            <p>AI 只负责提出整理建议；重要经历需要用户审阅、修改与确认后，才会进入事件和长期记录。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">03</span>
+            <h3>从想法走向行动</h3>
+            <p>对话可以自然转化为今日计划、长期目标和专注任务，完成结果继续成为下一次对话的反馈。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">04</span>
+            <h3>可带走的个人上下文</h3>
+            <p>个人画像、有效对话、事件、情绪和计划可导出为 JSON，让记录真正由用户掌握。</p>
+          </article>
+        </section>
+
+        <section class="mood-detail__tech" aria-labelledby="moodTechTitle">
+          <p class="mood-detail__section-label" id="moodTechTitle">TECHNICAL FOUNDATION</p>
+          <div class="mood-detail__tech-copy">
+            <h3>桌面端、本地数据与 RAG 服务被组织成一套完整工作流。</h3>
+            <div class="mood-detail__stack" aria-label="技术栈">
+              <span>Next.js 16</span>
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Electron</span>
+              <span>Prisma</span>
+              <span>FastAPI</span>
+              <span>ChromaDB</span>
+            </div>
+            <p class="mood-detail__note">
+              Beta 版本随应用提供 3 万余条向量记录的本地 RAG 索引；重要信息加密保存，用户也可以独立控制长期记忆、历史上下文与个人记录导出。
+            </p>
+          </div>
+        </section>
+
+        <footer class="mood-detail__closing">
+          <p>模型会更换，但你不必每次重新介绍自己。</p>
+          <a class="mood-detail__github" href="https://github.com/feifei-00015/MOOD" target="_blank" rel="noreferrer">VIEW PROJECT ON GITHUB ↗</a>
+        </footer>
+      </div>
+
+      <button class="mood-detail__back" id="moodDetailBack" type="button">
+        <span aria-hidden="true">←</span> BACK TO PROJECTS
+      </button>
+
+      <div class="mood-image-viewer" id="moodImageViewer" role="dialog" aria-modal="true" aria-label="MOOD 图片预览" aria-hidden="true">
+        <figure class="mood-image-viewer__figure">
+          <img class="mood-image-viewer__image" id="moodImageViewerImage" alt="" />
+          <figcaption class="mood-image-viewer__caption" id="moodImageViewerCaption"></figcaption>
+        </figure>
+        <button class="mood-image-viewer__close" id="moodImageViewerClose" type="button" aria-label="关闭图片预览">×</button>
+      </div>
+    </article>
+
+    <article
+      class="mood-detail"
+      id="whatIfDetail"
+      role="dialog"
+      aria-modal="true"
+      aria-label="WHAT_IF 项目详情"
+      aria-hidden="true"
+    >
+      <!-- Replace the placeholder background with the project cover or video. -->
+      <header class="mood-detail__hero what-if-detail__hero">
+        <div class="mood-detail__hero-shade" aria-hidden="true"></div>
+        <div class="mood-detail__hero-copy">
+          <div>
+            <span class="mood-detail__eyebrow">COUNTERFACTUAL EXPLORATION · 2026</span>
+            <h2 class="mood-detail__title">WHAT_IF</h2>
+          </div>
+          <p class="mood-detail__lead">如果当时做了另一个选择，故事会走向哪里？WHAT_IF 从你讲述的真实经历出发，用 AI 推演不同的可能走向，再把它们铺成一张可以探索、回看的记忆星图。</p>
+        </div>
+      </header>
+
+      <div class="mood-detail__body">
+        <section class="mood-detail__intro-grid" aria-labelledby="whatIfOverviewTitle">
+          <p class="mood-detail__section-label" id="whatIfOverviewTitle">PROJECT OVERVIEW</p>
+          <p class="mood-detail__statement">以真实经历为起点，<br />看见一个「如果」<br />如何展开。</p>
+        </section>
+
+        <div class="mood-detail__facts" aria-label="项目基本信息">
+          <div class="mood-detail__fact"><span>ROLE</span><strong>Product / Design / Development</strong></div>
+          <div class="mood-detail__fact"><span>TYPE</span><strong>AI Web Experience</strong></div>
+          <div class="mood-detail__fact"><span>STATUS</span><strong>Local Prototype</strong></div>
+        </div>
+
+        <section class="mood-arc-gallery" aria-label="WHAT_IF 产品界面占位">
+          <div class="mood-arc-gallery__meta">
+            <span>PRODUCT GALLERY</span>
+            <span>素材待补充</span>
+          </div>
+          <div class="what-if-gallery">
+            <figure class="what-if-gallery__placeholder"><span aria-hidden="true">01</span><figcaption>故事输入 · 素材待补充</figcaption></figure>
+            <figure class="what-if-gallery__placeholder"><span aria-hidden="true">02</span><figcaption>可能性星图 · 素材待补充</figcaption></figure>
+            <figure class="what-if-gallery__placeholder"><span aria-hidden="true">03</span><figcaption>路径回看 · 素材待补充</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="mood-detail__features" aria-label="WHAT_IF 核心能力">
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">01</span>
+            <h3>从真实故事出发</h3>
+            <p>先讲述发生过的事，再写下想改变的选择。系统整理事实、时间线、明确的动机与未知问题，以你提出的「如果」为推演起点，让后续走向有迹可循。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">02</span>
+            <h3>让可能性逐步展开</h3>
+            <p>轻度、正常与深度三种模式，沿着「发现可能性、合理深化、自然收束」推进。分叉围绕不同条件与回应展开；稳定的走向可以提前结束，尚不确定的部分保留开放结尾。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">03</span>
+            <h3>沿星光回看每次选择</h3>
+            <p>拖动、缩放星图，点击一个节点，来路便被暖金色光线点亮。右侧的「故事走向」依次展开沿途变化；切换支线时保留共同起点，方便对照不同选择如何走向不同结果。</p>
+          </article>
+          <article class="mood-detail__feature">
+            <span class="mood-detail__feature-index">04</span>
+            <h3>接着探索未完的故事</h3>
+            <p>每批推演完成后保存进度。可以在当前请求结束后暂停，也能在刷新或中断后继续，让一棵逐渐生长的可能性树，按自己的节奏慢慢看完。</p>
+          </article>
+        </section>
+
+        <section class="mood-detail__tech" aria-labelledby="whatIfTechTitle">
+          <p class="mood-detail__section-label" id="whatIfTechTitle">TECHNICAL FOUNDATION</p>
+          <div class="mood-detail__tech-copy">
+            <h3>把故事整理、分支推演与星图交互连成一次完整体验。</h3>
+            <div class="mood-detail__stack" aria-label="技术栈">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>SVG</span>
+              <span>WebGL</span>
+              <span>JSON Schema</span>
+            </div>
+            <p class="mood-detail__note">原生 JavaScript 驱动树形布局与路径交互，SVG 光丝和 WebGL 背景共同构成记忆星图。Node.js 后端负责模型调用与结构校验；新故事按三阶段生成完整子树，校验通过后再接入故事。当前为本地验证原型，生成内容用于探索可能性。</p>
+          </div>
+        </section>
+
+        <footer class="mood-detail__closing">
+          <p>给每一个「如果」，<br />一张可以回看的星图。</p>
+          <span class="mood-detail__section-label">项目链接待补充</span>
+        </footer>
+      </div>
+
+      <button class="mood-detail__back" id="whatIfDetailBack" type="button">
+        <span aria-hidden="true">←</span> BACK TO PROJECTS
+      </button>
+    </article>
+
+    <div class="mood-transition-card" id="moodTransitionCard" hidden aria-hidden="true">
+      <img src="../assets/mood/mood-logo.png" alt="" draggable="false" />
+    </div>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

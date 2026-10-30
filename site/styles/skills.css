@@ -1,0 +1,81 @@
+.services-page {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(80px, 10vw, 132px) clamp(40px, 5vw, 88px);
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: clamp(40px, 4vw, 60px) clamp(40px, 4vw, 60px) 0 0;
+  background: #050505;
+  color: #f5f5f2;
+  font-family: "Kanit", "Inter", sans-serif;
+}
+
+.services-heading {
+  margin-bottom: clamp(64px, 8vw, 112px);
+  font-size: clamp(72px, 12vw, 160px);
+  font-weight: 900;
+  line-height: 0.82;
+  text-align: center;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+}
+
+.services-list {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: clamp(150px, 18vw, 250px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 80px);
+  align-items: center;
+  padding: clamp(32px, 4vw, 52px) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.service-number {
+  color: #f5f5f2;
+  font-size: clamp(72px, 10vw, 140px);
+  font-weight: 900;
+  line-height: 0.72;
+  letter-spacing: -0.07em;
+}
+
+.service-name {
+  margin-bottom: clamp(16px, 1.8vw, 24px);
+  font-size: clamp(28px, 2.8vw, 42px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+.service-description {
+  max-width: 720px;
+  color: #f5f5f2;
+  font-size: clamp(16px, 1.45vw, 20px);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.service-description strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+[data-service-reveal] {
+  opacity: 0;
+  transform: translateY(42px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--service-delay, 0ms);
+}
+
+[data-service-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
